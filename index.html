@@ -1,0 +1,68 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <!-- /jquery -->
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+  <!-- /leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js" integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg==" crossorigin=""></script>
+  
+  <style>
+	html, body { height: 100%; padding: 0; margin: 0 } 
+	#mapId { height: 100vh; width: 100vw; }
+    .ui-page { background:#f7cac9}
+    header {background:#eca1a6}
+  </style>
+
+</head>
+
+<body>
+    <div data-role="page" id="home">
+        <div data-role="header" data-theme="e">
+            <h1>My Foodie App</h1>
+            <a id="locate" href="#" data-icon="search" class="ui-btn-right">Explore</a>
+            <a id="btn-map" href="#" data-icon="location" class="ui-btn-left">Map</a>
+        </div><!-- /header -->
+    
+        <div data-role="content">
+            <ul id="food_list" data-role="listview" data-inset="true" data-theme="a">
+            </ul>
+        </div><!-- /content -->
+    </div><!-- /page -->
+
+    <div data-role="page" id="details">
+        <div data-role="header" data-add-back-btn="true"  data-theme="e">
+            <h1>Foodie Details</h1>
+        </div><!-- /header -->
+    
+        <div data-role="content">
+            <img id="restIcon" />
+            <h4 id="restName"></h4>
+            <ul data-role="listview" data-inset="true" data-inset="true" data-theme="e">
+                <li><span id="restCatName"></span></li>
+                <li><span id="restDist"></span></li>
+                <li><span id="restAdd"></span></li>
+            </ul>
+        </div><!-- /content -->
+    </div><!-- /page -->
+
+    <div data-role="page" id="map">
+        <div data-role="header" data-theme="e" >
+            <h1>Foodie Map</h1>
+            <a id="btn-back" href="#" data-icon="back" class="ui-btn-left">Back</a>
+            <a id="btn-loc" href="#" data-icon="navigation" class="ui-btn-right">Locate</a>
+         </div><!-- /header -->
+    
+         <div data-role="content" id="mapId">
+         </div><!-- /content -->
+    </div><!-- /page -->
+
+    <script src="foodiecode4.js"></script>
+</body>
+</html>
